@@ -21,6 +21,12 @@ Now that you’ve created a Salesforce DX project, what’s next? Here are some 
 
 Add the following script to the header markup in your community. Be sure to replace the "reCAPTCHA_site_key" with the site key from google. 
 
+### Named Credential Setup
+
+Add the secret key from google to the password field in the "reCAPTCHA" Named Credential.
+
+### Experience Cloud Setup
+
 ~~~~
 <!--reCaptcha v2 Checkbox-->
 <script>
@@ -54,4 +60,25 @@ Add the following script to the header markup in your community. Be sure to repl
     }); 
 </script>
 <script src='https://www.google.com/recaptcha/api.js?render=explicit&onload=onloadCallback' async defer></script>
+~~~~
+
+## Usage
+
+The `recaptchaValidator` component can be used in other Ligtning components. 
+`<c-recaptcha-validator></c-recaptcha-validator>`
+
+Before submitting a form the reCAPTCHA validation satus can be checked by accessing the isValid property.
+
+~~~~
+
+  handleSubmit(event) {
+    event.preventDefault();
+
+    if (this.template.querySelector('c-recaptcha-validator').isValid) {
+      // insert record
+    } else {
+      // handle invalid reCAPTCHA
+    }
+  }
+
 ~~~~
