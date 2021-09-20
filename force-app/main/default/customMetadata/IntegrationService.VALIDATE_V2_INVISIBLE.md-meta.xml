@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>VALIDATE_V2_INVISIBLE</label>
+    <protected>false</protected>
+    <values>
+        <field>HttpMethod__c</field>
+        <value xsi:type="xsd:string">POST</value>
+    </values>
+    <values>
+        <field>IntegrationConfiguration__c</field>
+        <value xsi:type="xsd:string">GOOGLE_reCAPTCHA</value>
+    </values>
+    <values>
+        <field>MockResponse__c</field>
+        <value xsi:type="xsd:string">{
+
+&quot;200&quot;: {
+&quot;body&quot;: {
+  &quot;success&quot;: true,
+  &quot;challenge_ts&quot;: &quot;&quot;,
+  &quot;timestamp&quot;: &quot;&quot;,
+  &quot;hostname&quot;: &quot;&quot;,,         
+  &quot;error-codes&quot;: &quot;&quot;,  
+},
+&quot;headers&quot;: null
+},
+
+&quot;500&quot;:{
+&quot;body&quot;: {
+  &quot;success&quot;: false,
+  &quot;challenge_ts&quot;: &quot;&quot;,
+  &quot;timestamp&quot;: &quot;&quot;,
+  &quot;hostname&quot;: &quot;&quot;,,         
+  &quot;error-codes&quot;: &quot;&quot;,     
+},
+&quot;headers&quot;: null
+}</value>
+    </values>
+    <values>
+        <field>Path__c</field>
+        <value xsi:type="xsd:string">/recaptcha/api/siteverify</value>
+    </values>
+</CustomMetadata>

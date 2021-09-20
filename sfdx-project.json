@@ -2,11 +2,23 @@
   "packageDirectories": [
     {
       "path": "force-app",
-      "default": true
+      "default": true,
+      "package": "sf-recaptcha-validator",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "dependencies": [
+        {
+          "package": "sf-integration-base",
+          "versionNumber": "0.1.0.LATEST"
+        }
+      ]
     }
   ],
   "name": "sf-recaptcha-validator",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "52.0"
+  "sourceApiVersion": "52.0",
+  "packageAliases": {
+    "sf-integration-base": "0Ho67000000Gmj1CAC"
+  }
 }
