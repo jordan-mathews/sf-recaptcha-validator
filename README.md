@@ -62,6 +62,8 @@ Add the secret key from google to the password field in the "reCAPTCHA" Named Cr
 <script src='https://www.google.com/recaptcha/api.js?render=explicit&onload=onloadCallback' async defer></script>
 ~~~~
 
+You will see Content Security Policy (CSP) errors as you implement reCAPTCHA. In Experience Builder → Settings → Security, add the trusted sites shown below and click the ‘Whitelist’ button as items show in the ‘CSP Errors’ list.
+
 ## Usage
 
 The `recaptchaValidator` component can be used in other Ligtning components. 
