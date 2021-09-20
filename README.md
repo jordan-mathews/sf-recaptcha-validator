@@ -67,7 +67,9 @@ You will see Content Security Policy (CSP) errors as you implement reCAPTCHA. In
 ## Usage
 
 The `recaptchaValidator` component can be used in other Ligtning components. 
-`<c-recaptcha-validator></c-recaptcha-validator>`
+```
+<c-recaptcha-validator></c-recaptcha-validator>
+```
 
 Before submitting a form the reCAPTCHA validation satus can be checked by accessing the isValid property.
 
